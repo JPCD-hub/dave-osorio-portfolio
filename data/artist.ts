@@ -11,7 +11,7 @@ export type Release = {
   credits?: string;
 };
 
-const assetPath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const assetPath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const artist = {
   name: "DAVE OSORIO",
@@ -36,8 +36,8 @@ export const artist = {
     whatsappUrl: "https://wa.me/573108260010",
   },
   media: {
-    logo: "/images/brand/DAVE 3.jpeg",
-    headerLogo: "/images/brand/DAVE 1.jpeg",
+    logo: `${assetPath}/images/brand/DAVE 3.jpeg`,
+    headerLogo: `${assetPath}/images/brand/DAVE 1.jpeg`,
     hero: "",
     profile: "",
   },
