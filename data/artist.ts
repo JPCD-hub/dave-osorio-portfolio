@@ -11,6 +11,8 @@ export type Release = {
   credits?: string;
 };
 
+const assetPath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const artist = {
   name: "DAVE OSORIO",
   location: "Pereira, Colombia",
@@ -47,16 +49,16 @@ export const releases: Release[] = [
     title: "PENSANDO EN TU PIEL",
     type: "Informacion pendiente de confirmar",
     description: "Audio local proporcionado por el artista.",
-    audioUrl: "/audio/PENSANDO EN TU PIEL.mp3",
+    audioUrl: `${assetPath}/audio/PENSANDO EN TU PIEL.mp3`,
   },
   {
     title: "MUY BIEN",
     type: "Informacion pendiente de confirmar",
     description: "Audio local proporcionado por el artista.",
-    audioUrl: "/audio/Muy Bien.mp3",
+    audioUrl: `${assetPath}/audio/Muy Bien.mp3`,
   },
-  { title: "AMOR", type: "Single", description: "Informacion pendiente de confirmacion.", audioUrl: "/audio/Amor.mp3" },
-  { title: "Solo & Contigo", type: "Single", description: "Informacion pendiente de confirmacion.", audioUrl: "/audio/Solo y Contigo.mp3" },
+  { title: "AMOR", type: "Single", description: "Informacion pendiente de confirmacion.", audioUrl: `${assetPath}/audio/Amor.mp3` },
+  { title: "Solo & Contigo", type: "Single", description: "Informacion pendiente de confirmacion.", audioUrl: `${assetPath}/audio/Solo y Contigo.mp3` },
 ];
 
 export const videos = [
